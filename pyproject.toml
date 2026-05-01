@@ -1,0 +1,29 @@
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "I",   # Isort
+    "C",   # Complexity
+    "N",   # Naming
+    "UP",  # pyupgrade
+    "TID", # flake8-tidy-imports
+]
+ignore = [
+    "D100", "D104", "D105", "D106", "D107", "D203", "D213",
+]
+
+[tool.ruff.lint.flake8-tidy-imports]
+# Enforce absolute imports
+ban-relative-imports = "all"
+
+[tool.ruff.lint.isort]
+known-first-party = ["template_package"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

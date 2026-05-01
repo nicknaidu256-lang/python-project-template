@@ -1,0 +1,24 @@
+[MASTER]
+ignore=CVS
+ignore-patterns=
+persistent=yes
+load-plugins=
+
+[MESSAGES CONTROL]
+# relative-beyond-top-level (W0403) is equivalent to relative import check
+enable=relative-beyond-top-level
+
+[REPORTS]
+output-format=text
+files-output=no
+reports=no
+evaluation=10.0 - ((float(5 * error + warning + refactor + convention) / statement) * 10)
+
+[FORMAT]
+max-line-length=120
+
+[IMPORTS]
+# Block all relative imports
+# Note: Pylint doesn't have a single "ban all relative" like Ruff's TID252,
+# but we can enforce strict checking or use custom plugins if needed.
+# For standard pylint, we rely on W0403 and ensuring absolute paths are used.

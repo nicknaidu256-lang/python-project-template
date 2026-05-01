@@ -1,0 +1,7 @@
+[flake8]
+max-line-length = 120
+extend-ignore = E203
+# flake8-tidy-imports configuration
+# TID252: Relative imports are banned.
+ban-relative-imports = all
+select = C,E,F,W,B,B9,TID
