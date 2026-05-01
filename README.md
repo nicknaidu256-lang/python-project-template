@@ -42,6 +42,13 @@ from template_package.utils import get_greeting  # PASSES
 - `.flake8`: Fallback configuration for Flake8.
 - `.pylintrc`: Fallback configuration for Pylint.
 
+## Activation as a GitHub Template
+To use this repository as a template for other projects:
+1.  Push this repository to GitHub.
+2.  Navigate to the repository **Settings** tab.
+3.  Under **General**, check the box labeled **Template repository**.
+4.  Now, you (and others) can click **Use this template** to create a new repository with this structure and CI/CD pipeline pre-installed.
+
 ## CI/CD Pipeline
 The template includes a pre-configured GitHub Actions workflow (`.github/workflows/ci.yml`) that:
 1.  Runs on every push and pull request to `main` or `master`.
